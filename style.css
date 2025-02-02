@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #222;
+    --button-bg: #f0f0f0;
+    --button-hover: #dcdcdc;
+    --operator-bg: #f39c12;
+    --operator-hover: #e67e22;
+    --equal-bg: #2ecc71;
+    --equal-hover: #27ae60;
+    --clear-bg: #e74c3c;
+    --clear-hover: #c0392b;
+}
+
+body.dark {
+    --bg-color: #222;
+    --text-color: #fff;
+    --button-bg: #333;
+    --button-hover: #444;
+    --operator-bg: #f39c12;
+    --operator-hover: #e67e22;
+    --equal-bg: #2ecc71;
+    --equal-hover: #27ae60;
+    --clear-bg: #e74c3c;
+    --clear-hover: #c0392b;
+}
+
+.calculator-container {
+    width: 320px;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.calculator-display {
+    background: var(--button-bg);
+    color: var(--text-color);
+    text-align: right;
+    font-size: 2rem;
+    padding: 20px;
+    border-bottom: 2px solid var(--button-hover);
+}
+
+.calculator-display input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 2rem;
+    text-align: right;
+    outline: none;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.calculator-buttons button {
+    background: var(--button-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    color: var(--text-color);
+}
+
+.calculator-buttons button:hover {
+    background: var(--button-hover);
+}
+
+.calculator-buttons .operator {
+    background: var(--operator-bg);
+    color: white;
+}
+
+.calculator-buttons .operator:hover {
+    background: var(--operator-hover);
+}
+
+.calculator-buttons .equal {
+    background: var(--equal-bg);
+    color: white;
+    grid-column: span 2;
+}
+
+.calculator-buttons .equal:hover {
+    background: var(--equal-hover);
+}
+
+.calculator-buttons .clear {
+    background: var(--clear-bg);
+    color: white;
+}
+
+.calculator-buttons .clear:hover {
+    background: var(--clear-hover);
+}
+
+.mode-toggle {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.mode-toggle button {
+    background: var(--button-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--text-color);
+}
+
+.mode-toggle button:hover {
+    background: var(--button-hover);
+}
